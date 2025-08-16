@@ -21,19 +21,21 @@ By the end, this repo will contain **production‑quality examples** of each Fab
 ---
 
 ## 🗂 Repository Structure
+
 ```
 fabric-dp700-prep/ 
 │ 
-├── week01_intro_fabric/ 
-├── week02_ingestion_transform/ 
-├── week03_governance_security/ 
-├── week04_orchestration_monitoring/ 
-├── week05_case_study/ 
-├── week06_review_and_exam_prep/ 
+├── week01_ingest_data/ 
+├── week02_lakehouse/ 
+├── week03_realtime_intel/ 
+├── week04_datawarehouse/ 
+├── week05_manage_env/ 
+├── week06_review_exam/ 
 ├── resources/ 
 ├── cheatsheets/ 
 └── README.md
 ```
+
 
 Each week’s folder contains:
 - **notes.md** — Key takeaways, code snippets, and diagrams
@@ -44,14 +46,14 @@ Each week’s folder contains:
 
 ## 📆 Study Timeline & Milestones
 
-| Week | Focus Area | Key Deliverable |
-|------|------------|-----------------|
-| 1 | Fabric fundamentals | Configured Fabric workspace & annotated screenshots |
-| 2 | Ingestion & transformation | Working Lakehouse pipeline + diagram |
-| 3 | Governance & security | Purview lineage diagram + governance checklist |
-| 4 | Orchestration & monitoring | Automated pipeline with alerting rules |
-| 5 | Capstone case study | End‑to‑end Fabric solution with full documentation |
-| 6 | Review & readiness | Finalized repo + exam prep |
+| Week | Focus Area (per syllabus) | Key Deliverable |
+|------|---------------------------|-----------------|
+| 1 | Ingest data with Microsoft Fabric | Configured ingestion pipelines + annotated screenshots |
+| 2 | Implement a Lakehouse with Microsoft Fabric | Lakehouse setup + ingestion & transformation diagram |
+| 3 | Implement Real‑Time Intelligence with Microsoft Fabric | Streaming dataflow + real‑time dashboard |
+| 4 | Implement a data warehouse with Microsoft Fabric | Data warehouse schema + sample queries |
+| 5 | Manage a Microsoft Fabric environment | Governance checklist + Purview lineage diagram |
+| 6 | Review & Exam Prep | Finalized repo, curated notes, and practice exam log |
 
 ---
 
@@ -75,7 +77,7 @@ Progress badges will be added here using [Shields.io](https://shields.io/):
 
 ## 📚 Resources
 
-- [Microsoft Learn DP‑700 Collection](https://learn.microsoft.com/en-us/certifications/exams/dp-700)
+- [Microsoft Learn DP‑700 Syllabus](https://learn.microsoft.com/en-us/training/courses/dp-700t00#course-syllabus)
 - [Fabric Blog](https://techcommunity.microsoft.com/t5/microsoft-fabric-blog/bg-p/MicrosoftFabricBlog)
 - [Exam Sandbox](https://learn.microsoft.com/en-us/certifications/exam-sandbox)
 
