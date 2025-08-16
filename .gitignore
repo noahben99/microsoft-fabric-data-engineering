@@ -1,0 +1,56 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ==========================
+# Jupyter Notebooks
+# ==========================
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ==========================
+# Microsoft Fabric / Power BI
+# ==========================
+*.pbix
+*.pbit
+*.zip
+*.pbip
+# Fabric exported datasets or reports
+*.pbidataset
+*.pbireport
+
+# ==========================
+# OS / Editor junk
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code settings (keep workspace clean; remove if you want to share)
+.vscode/
+
+# ==========================
+# Logs / temp files
+# ==========================
+*.log
+*.tmp
+*.temp
+~$*
+
+# ==========================
+# Data dumps (if not needed in repo)
+# ==========================
+*.csv
+*.tsv
+*.parquet
+*.json
