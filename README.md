@@ -21,7 +21,7 @@ By the end, this repo will contain **production‑quality examples** of each Fab
 ---
 
 ## 🗂 Repository Structure
-
+```
 fabric-dp700-prep/ 
 │ 
 ├── week01_intro_fabric/ 
@@ -33,7 +33,7 @@ fabric-dp700-prep/
 ├── resources/ 
 ├── cheatsheets/ 
 └── README.md
-
+```
 
 Each week’s folder contains:
 - **notes.md** — Key takeaways, code snippets, and diagrams
