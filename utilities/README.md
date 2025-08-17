@@ -21,6 +21,7 @@ This folder contains helper scripts and tools that support workflow efficiency, 
 **Usage examples:**
 ```powershell
 # With parameters
+C:\Users\sjacobs\OneDrive\Documents\Evanescent\microsoft-fabric-data-engineering\utilities>  
 .\save-clipboard-image.ps1 -path week03 -filename dataflow_overview
 
 # Interactive prompts
