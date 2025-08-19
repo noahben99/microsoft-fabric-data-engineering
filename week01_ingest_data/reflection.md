@@ -1,5 +1,16 @@
 
-[Differences between Azure Data Factory and Fabric Data Factory](#some-id)
+[Differences between Azure Data Factory and Fabric Data Factory](#jump-01)
+[Where can I access my Gen2 Dataflows?](#jump-02)
+[Staging on tables to improve performance during data transformations](#jump-03)
+[Gen2 Dataflows vs Power Query Gen1 Dataflows](#jump-04)
+[Fact tables Dimensional tables and Star Schema](#jump-05)
+[Transactional Tables](#jump-06)
+[Normalization and denormalization](#jump-07)
+["Normal Form" Concepts ](#jump-08)
+[Avoid Recomputing Views Every Time ](#jump-09)
+[Why SQL Views Fall Short for Lineage  ](#jump-10)
+[Unit 4 - Integrate Dataflows Gen2 and Pipelines in Microsoft Fabric ](#jump-13)
+
 
 # Week 1 Reflection
 
@@ -17,6 +28,7 @@ In this module, you will learn how to use Dataflows Gen2
 
 ## Unit 2
 ---
+<a name="jump-01" /></a>
 
 ## Differences between Azure Data Factory and Fabric Data Factory
 > I have used Azure Data Factory, both piplelines and dataflows.  What is the equivalent of these technologies in Fabric?
@@ -50,27 +62,39 @@ In this module, you will learn how to use Dataflows Gen2
 | Monitoring                                      | Monitoring hub + Run history             | **Advanced monitoring:** Modern hub with cross-workspace insights and better drill-down. |
 
 
+
 ## Unit 3
 
-Data flows are created, managed, and modified in the Power Query editor.  
-A query that has been created in the Power Query editor is a dataflow.
+💡Data flows are created, managed, and modified in the Power Query editor.  
+💡A query that has been created in the Power Query editor is a **dataflow**.
+💡When working in Power Query through Fabric, this can also be referred to as **Power Query Online**
 
-A few things you can do in Power Query that are not really dataflow activities (these are not data transformations)
+💡A few things you can do in Power Query that are not really dataflow activities (these are not data transformations)
 - Manage Connections
 - Set the default data destination
 - create and manage parameters
 
-#### Where can I access my Gen2 Dataflows?
-- Data Factory
-- Power BI workspace
-- Directly in the lakehouse
+💡Queries (data sources) that are added in Power Query will become Tables in your Data Store.
 
+<a name="jump-02" /></a>
+
+#### Where can I access my Gen2 Dataflows?
+- Data Factory workload
+> In Microsoft Fabric, a Data Factory workload refers to the environment where you build and manage data integration processes—especially using Dataflows Gen2. Think of it as your workspace for ingesting, transforming, and loading data across various sources into Fabric destinations like lakehouses, warehouses, or SQL databases.
+
+![switch-to-data-factory-workload](assets/switch-to-data-factory-workload.png)
+- Power BI workspace
+![from-power-bi-workspace](assets/from-power-bi-workspace.png)
+- Directly in the lakehouse
+![directly-in-the-lakehouse](assets/directly-in-the-lakehouse.png)
 
 <img src="assets/dataflow_overview.png" alt="dataflow_overview" width="1000" height="">
 
 
 
 ---
+<a name="jump-03" /></a>
+
 # Staging on tables to improve performance during data transformations  
 >❓  I have a dataflow gen2 with several data sources.  One of those data sources only needs to be loaded once.  It's a reference table that is used to map values, for lookup purposes only.  The other data sources are dynamic, and should be refreshed whenever the whole dataflow is refreshed.  How can I do that? 
 
@@ -91,7 +115,8 @@ Once you've migrated your data warehouse to Azure Synapse, Microsoft can moderni
 For ELT strategies, consider offloading ELT processing to Data Lake Storage to easily scale as your data volume or frequency grows.
 
 ---
-<a name="some-id" />
+<a name="jump-04" /></a>
+
 # Gen2 Dataflows vs Power Query Gen1 Dataflows
 
 >❓ Tell me some differences between Gen2 dataflows and what I am used to doing in Power Query through Power BI in the past.
@@ -106,7 +131,7 @@ Another significant difference is how queries are managed. In Dataflows Gen2, qu
 Lastly, Dataflows Gen2 also include performance optimization features, such as enabling staging on tables which can greatly enhance performance during data transformations. This capability allows for better resource management and improved throughput, especially when working with large datasets or complex transformation logic, making your data processing workflows more efficient.
 
 ---
-
+<a name="jump-05" /></a>
 
 # Fact tables Dimensional tables and Star Schema
 >❓ Please tell me more about fact tables Dimensional tables and Star Schema
@@ -249,6 +274,8 @@ Describes the time of sale.
 
 
 ---
+<a name="jump-06" /></a>
+
 # Transactional Tables
 > I’m familiar, in financial databases, with the concept of transaction tables.  How is that similar?
 
@@ -318,6 +345,8 @@ TransactionTypeDim
 If you're thinking about modeling financial data in Fabric for analytics, you could absolutely treat your transaction tables as fact tables — just enrich them with dimension keys and structure them for performance.
 
 ---
+<a name="jump-07" /></a>
+
 
 # Normalization and denormalization
 
@@ -380,6 +409,8 @@ This makes reporting faster, but if Steven changes his name, you now have to upd
 
 
 ---
+<a name="jump-08" /></a>
+
 # "Normal Form" Concepts 
 **1NF – First Normal Form**
 Rule: Every column should contain atomic values — meaning indivisible, single pieces of data.
@@ -419,6 +450,8 @@ The numbering reflects a progressive hierarchy:
 
 
 ---
+<a name="jump-09" /></a>
+
 # Avoid Recomputing Views Every Time 
 > I often struggle with the issue that a sql view could be very slow to generate each time requested from the server.  And, because the data was only refreshed once per hour, it seemed wasteful to calculate a view every time a report was ran.  So, every time the data was refreshed, we would save the view as a temporary table and use that as the report dataset.  How can I do this better using fabric?
 
@@ -608,6 +641,8 @@ For your gold layer in a medallion architecture, Direct Lake is a sweet spot:
 
 
 ---
+<a name="jump-10" /></a>
+
 
 ## Why SQL Views Fall Short for Lineage  
 > One concern I have using views is that it’s difficult to visualize the lineage of datasets when there are multiple joins and especially hard to track complex data transformations.  I have always used views and stored procedures before, but I think I’m going to need to learn dataflow gen2 to improve visibility and clarity on where my data comes from.
@@ -674,9 +709,10 @@ Given your strengths in scripting and automation, you’ll love how Dataflow Gen
 
 
 ---
+<a name="jump-11" /></a>
 
 
-## Gen2 Workflow Documentation
+# Gen2 Workflow Documentation
 > After I build a complex gen2 workflow, what’s a best practice for documentation in GitHub, or is there a better place to document within the fabric ecosystem?
 
 **🤖 Copilot’s Response**  
@@ -797,3 +833,53 @@ Since you're building solo, include:
 
 This turns your repo into a living playbook, not just a code dump.
 
+
+---
+<a name="jump-12" /></a>
+
+
+# Fabric terminology
+> Please help me understand how these terms are related and how they are difference. Context will be Microsoft Fabric. "Data Store","Data Lake","Data Warehouse","One Lake"
+
+**🤖 Copilot’s Response**  
+> Let’s break these down in Microsoft Fabric terms so you can see both the relationships and the distinctions — and how they fit together in the platform’s architecture.
+
+
+🧩 How They Relate
+Think of them as layers and specializations in Fabric’s unified data ecosystem:
+
+**OneLake** is the single, logical storage layer for all Fabric data — the “OneDrive for data.” Everything else (Lakehouse, Warehouse, etc.) stores its data in OneLake.
+
+**Data Store** is a generic term for any storage object in Fabric that holds data — this could be a Lakehouse, Warehouse, Eventhouse, Datamart, etc.
+
+**Data Lake** is a type of data store designed for raw, semi‑structured, and unstructured data, optimized for big data processing. In Fabric, the Lakehouse is the main “data lake” implementation.
+
+**Data Warehouse** is another type of data store, but optimized for structured, relational, analytics‑ready data with schema enforcement and strong SQL capabilities.
+
+
+| Term           | What It Is in Fabric                                                                                           | Typical Data Types                                      | Primary Use Case                                   | Access & Processing                                                  |
+| :------------- | :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------------- | :------------------------------------------------------------------- |
+| Data Store     | Generic category for any Fabric storage object (Lakehouse, Warehouse, Eventhouse, etc.)                        | Varies by store type                                    | Broad — depends on the store                       | Depends on the store type (Spark, T‑SQL, KQL, etc.)                  |
+| Data Lake      | Concept: large‑scale storage for raw/semi‑structured/unstructured data. In Fabric, implemented as a Lakehouse | Files (Parquet, CSV, JSON, images, etc.) + tabular data | Data engineering, data science, advanced analytics | Spark notebooks, pipelines, Dataflows Gen2, SQL endpoint (read‑only) |
+| Data Warehouse | Structured, relational store optimized for analytics                                                          | Tables with defined schema (fact/dimension)             | BI reporting, fast SQL queries, governed analytics | T‑SQL (full DDL/DML), pipelines, Dataflows Gen2                      |
+| OneLake        | Fabric’s unified storage foundation                                                                            | All formats from all Fabric workloads                   | Centralized storage & sharing across workspaces    | Shortcuts, cross‑store queries, Spark, T‑SQL, KQL                    |
+
+Putting It Together in Fabric
+- OneLake is the foundation — every data store in Fabric writes to it.
+- Data Store is the category — Lakehouse and Warehouse are both examples.
+- Data Lake (Lakehouse) is flexible — handles any structure, great for raw ingestion and transformation.
+- Data Warehouse is optimized — structured, governed, and tuned for BI and SQL analytics.
+
+## Unit 4
+---
+<a name="jump-13" /></a>
+
+Examples of activities that occur in a pipeline:
+- Copy data
+- Incorporate Dataflow
+- Add Notebook
+- Get metadata
+- Execute a script or stored procedure
+
+💡A pipeline can be used to run a dataflow
+- Run on a schedule or by a trigger

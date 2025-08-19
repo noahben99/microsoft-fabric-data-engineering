@@ -1,4 +1,10 @@
 # ==========================
+# private / sensitive or local-only files out of version control
+# ==========================
+private-resources/
+utilities/
+
+# ==========================
 # Python
 # ==========================
 __pycache__/
