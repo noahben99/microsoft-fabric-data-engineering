@@ -1,13 +1,4 @@
-
-# 🛠 Utilities
-
-This folder contains helper scripts and tools that support workflow efficiency, automation, and asset management for the **Microsoft Fabric Data Engineering** training repository.
-
----
-
-## 📄 Included Scripts
-
-### 1. `save-clipboard-image.ps1`
+ `save-clipboard-image.ps1`
 > Save an image from your Windows clipboard directly into the correct `assets` folder for a given training week and return a ready‑to‑paste Markdown link.
 
 **Features:**
@@ -21,11 +12,12 @@ This folder contains helper scripts and tools that support workflow efficiency, 
 **Usage examples:**
 ```powershell
 # With parameters
-cd "C:\Users\sjacobs\OneDrive\Documents\Evanescent\microsoft-fabric-data-engineering\utilities"  
-.\save-clipboard-image.ps1 -path week03 -filename dataflow_overview
+cd "C:\Users\sjacobs\OneDrive\Documents\Evanescent\microsoft-fabric-data-engineering\scripts\save-clipboard\"  
+
+.\save-clipboard-image.ps1 -path "\week01_ingest_data\labs" -filename one-lake-catalog
 
 # Interactive prompts
-cd "C:\Users\sjacobs\OneDrive\Documents\Evanescent\microsoft-fabric-data-engineering\utilities"  .\save-clipboard-image.ps1
+cd "C:\Users\sjacobs\OneDrive\Documents\Evanescent\microsoft-fabric-data-engineering\scripts\save-clipboard\save-clipboard-image.ps1"  .\save-clipboard-image.ps1
 
 
 Other one-liners

@@ -16,6 +16,19 @@
 |Manage objects in **a** workspace<br>• [(List View)](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/list)<br>• [(Diagram View)](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/lineage)|View existing workspace objects<br>and create new ones|```/groups/{group_id}/list```<br>```/groups/{group_id}/lineage```|
 |Manage objects in **my** workspace<br>• [(List View)](https://app.fabric.microsoft.com/groups/me/list)<br>• [(Diagram View)](https://app.fabric.microsoft.com/groups/me/lineage)|View existing workspace objects<br>and create new ones|```/groups/me/list```<br>```/groups/me/lineage```|
 
+## Workspace Settings
+
+||||
+|---|---|---|
+|[Dashboards](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/settings/dashboards)|Manage Dashboards|```/groups/{group_id}/settings/dashboards```|
+|[Semantic Models](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/settings/datasets)|Manage Semantic Models|```/groups/{group_id}/settings/datasets```|
+|[Workbooks](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/settings/workbooks)|Manage workbooks|```/groups/{group_id}/settings/workbooks```|
+|[reports](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/settings/reports)|Manage reports|```/groups/{group_id}/settings/reports```|
+|[dataflows](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/settings/dataflows)|Manage dataflows|```/groups/{group_id}/settings/dataflows```|
+|[apps](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/settings/apps)|Manage apps|```/groups/{group_id}/settings/apps```|
+
+
+
 ## Lake Warehouses
 ||||
 |---|---|---|
@@ -50,4 +63,13 @@
 
 
 
+## User Settings
 
+||||
+|---|---|---|
+|[General](https://app.fabric.microsoft.com/user/user-settings/general)|Display language, privacy|```/user/user-settings/general```|
+|[Power BI Subscriptions](https://app.fabric.microsoft.com/user/user-settings/notifications/subscriptions)|Manage subscriptions|```/user/user-settings/notifications/subscriptions```|
+|[Power BI Alerts](https://app.fabric.microsoft.com/user/user-settings/notifications/alerts)|Manage alerts|```/user/user-settings/notifications/alerts```|
+|[Power BI Settings](https://app.fabric.microsoft.com/user/user-settings/notifications/settings)|**Email**<br>• Send me an email digest of updates to my frequents and content viewed by my organization<br><br>**Teams**<br>• Send me a notification on the latest activity in Power BI<br>• Send me a reminder when someone shares an item with me<br>• Send me a reminder when someone requests access to an item I own|```/user/user-settings/notifications/settings```|
+|[Item Settings](https://app.fabric.microsoft.com/user/user-settings/notifications/item-settings)|**Power BI**<br>• Use ArcGIS for Power BI|```/user/user-settings/notifications/item-settings```|
+|[Developer Settings](https://app.fabric.microsoft.com/user/user-settings/notifications/developer-settings)|**Power BI Developer mode**<br>• Turn developer mode on when you want to develop a Power BI visual.|```/user/user-settings/notifications/developer-settings```|

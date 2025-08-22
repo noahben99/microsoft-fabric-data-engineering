@@ -31,8 +31,8 @@
         - OneLake settings
         - Copilot and Azure OpenAI Service​
 
-![create-a-workspace-1](create-a-workspace-1.png)
-![create-a-workspace-2](create-a-workspace-2.png)
+![create-a-workspace-1](../../images/create-a-workspace-1.png)
+![create-a-workspace-2](../../images/create-a-workspace-2.png)
 
 [enable-large-models](https://learn.microsoft.com/en-us/fabric/enterprise/powerbi/service-premium-large-models#enable-large-models)
 ---
