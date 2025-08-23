@@ -11,7 +11,7 @@
 - 🔗[Datasets](#bookmark-08)
 - 🔗[User Settings](#bookmark-09)
 
-<a name="#bookmark-01" /><a>
+<a name="bookmark-01" /><a>
 ## Navigation Tools
 
 ||||
@@ -22,7 +22,7 @@
 [ Monitoring Hub](https://app.fabric.microsoft.com/monitoringhub?experience=fabric-developer)|View and track the status of the activities<br>across all the workspaces for which you<br>have permissions within 
 Microsoft Fabric.|```/montitoringhub```|
 
-<a name="#bookmark-02" /><a>
+<a name="bookmark-02" /><a>
 ## Workspaces
 
 ||||
@@ -32,7 +32,7 @@ Microsoft Fabric.|```/montitoringhub```|
 
 
 
-<a name="#bookmark-03" /><a>
+<a name="bookmark-03" /><a>
 ## Workspace Settings
 
 ||||
@@ -48,7 +48,7 @@ Microsoft Fabric.|```/montitoringhub```|
 
 
 
-<a name="#bookmark-04" /><a>
+<a name="bookmark-04" /><a>
 ## Lake Warehouses
 ||||
 |---|---|---|
@@ -58,7 +58,7 @@ Microsoft Fabric.|```/montitoringhub```|
 
 
 
-<a name="#bookmark-05" /><a>
+<a name="bookmark-05" /><a>
 ## Mirrored Lakehouses
 ||||
 |---|---|---|
@@ -66,7 +66,7 @@ Microsoft Fabric.|```/montitoringhub```|
 
 
 
-<a name="#bookmark-06" /><a>
+<a name="bookmark-06" /><a>
 ## Lakehouses
 
 ||||
@@ -75,7 +75,7 @@ Microsoft Fabric.|```/montitoringhub```|
 
 
 
-<a name="#bookmark-07" /><a>
+<a name="bookmark-07" /><a>
 ## Data Factory
 
 ||||
@@ -85,7 +85,7 @@ Microsoft Fabric.|```/montitoringhub```|
 |[ get objects in a dataflow](https://app.fabric.microsoft.com/datahub/artifacts/97fcf54b-aa42-43c3-9177-25751d117932)|View existing objects in the dataflow with links to explore each one.|```/datahub/artifacts/
 {dataflow_id}```|
 
-<a name="#bookmark-08" /><a>
+<a name="bookmark-08" /><a>
 ## Datasets
 ||||
 |---|---|---|
@@ -97,7 +97,7 @@ Microsoft Fabric.|```/montitoringhub```|
 
 
 
-<a name="#bookmark-09" /><a>
+<a name="bookmark-09" /><a>
 ## User Settings
 
 ||||
