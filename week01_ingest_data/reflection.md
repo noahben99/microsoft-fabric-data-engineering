@@ -1,15 +1,15 @@
 
-[Differences between Azure Data Factory and Fabric Data Factory](#jump-01)
-[Where can I access my Gen2 Dataflows?](#jump-02)
-[Staging on tables to improve performance during data transformations](#jump-03)
-[Gen2 Dataflows vs Power Query Gen1 Dataflows](#jump-04)
-[Fact tables Dimensional tables and Star Schema](#jump-05)
-[Transactional Tables](#jump-06)
-[Normalization and denormalization](#jump-07)
-["Normal Form" Concepts ](#jump-08)
-[Avoid Recomputing Views Every Time ](#jump-09)
-[Why SQL Views Fall Short for Lineage  ](#jump-10)
-[Unit 4 - Integrate Dataflows Gen2 and Pipelines in Microsoft Fabric ](#jump-13)
+- [Differences between Azure Data Factory and Fabric Data Factory](#jump-01)
+- [Where can I access my Gen2 Dataflows?](#jump-02)
+- [Staging on tables to improve performance during data transformations](#jump-03)
+- [Gen2 Dataflows vs Power Query Gen1 Dataflows](#jump-04)
+- [Fact tables Dimensional tables and Star Schema](#jump-05)
+- [Transactional Tables](#jump-06)
+- [Normalization and denormalization](#jump-07)
+- ["Normal Form" Concepts ](#jump-08)
+- [Avoid Recomputing Views Every Time ](#jump-09)
+- [Why SQL Views Fall Short for Lineage  ](#jump-10)
+- [Unit 4 - Integrate Dataflows Gen2 and Pipelines in Microsoft Fabric ](#jump-13)
 
 
 # Week 1 Reflection

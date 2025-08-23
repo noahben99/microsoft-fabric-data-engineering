@@ -1,11 +1,11 @@
-# ⚡ Event-Driven Pipeline Trigger in Microsoft Fabric
+# Event-Driven Pipeline Trigger in Microsoft Fabric
 
-## 🎯 Goal
+##  Goal
 Automatically trigger a Fabric pipeline when a new file is added to a OneLake Lakehouse folder (e.g., `/Files`), enabling ETL and post-processing workflows.
 
 ---
 
-## 🧩 Prerequisites
+## Prerequisites
 - A Lakehouse created in Fabric
 - A pipeline that includes:
   - Dataflow Gen2 for ETL
@@ -15,7 +15,7 @@ Automatically trigger a Fabric pipeline when a new file is added to a OneLake La
 
 ---
 
-## 🛠️ Step-by-Step Setup
+## Step-by-Step Setup
 
 ### Step 1: Prepare Your Lakehouse
 - Upload a test file to the root folder (`/Files`) of your Lakehouse
@@ -48,12 +48,12 @@ Automatically trigger a Fabric pipeline when a new file is added to a OneLake La
 
 ---
 
-## 📌 Notes
+## Notes
 - Reflex triggers currently support file creation, not modification or deletion
 - You can extend this flow with semantic routing based on filename patterns
 - For onboarding clarity, consider adding a `README.md` or `manifest.json` in each domain folder
 
 ---
 
-## 📚 Reference
+## Reference
 For a full walkthrough, see Microsoft’s official guide on [building event-driven pipelines in Fabric](https://learn.microsoft.com/en-us/fabric/real-time-hub/tutorial-build-event-driven-data-pipelines).

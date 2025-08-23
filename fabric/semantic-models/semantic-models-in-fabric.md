@@ -1,12 +1,12 @@
 
 # Working with a semantic model in Fabric
 
-[🔗 Manage objects in a workspace](#jump-01)
-[🔗 Explore a semantic model](#jump-02)
-[🔗 Semantic models settings](#jump-03)
-[🔗 Semantic model detail](#jump-04)
-[🔗 View Semantic Model](#jump-05)
-[🔗 Edit a Semantic Model](#jump-06)
+- [🔗 Manage objects in a workspace](#jump-01)
+- [🔗 Explore a semantic model](#jump-02)
+- [🔗 Semantic models settings](#jump-03)
+- [🔗 Semantic model detail](#jump-04)
+- [🔗 View Semantic Model](#jump-05)
+- [🔗 Edit a Semantic Model](#jump-06)
 
 ---
 <a name="jump-01" /></a>

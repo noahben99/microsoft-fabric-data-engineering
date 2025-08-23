@@ -24,6 +24,7 @@
 ||||
 |---|---|---|
 |[ Home](https://app.fabric.microsoft.com/home?experience=fabric-developer)|<ul><li>Create A New Workspace</li><li>My Learning links</li><li>Recent Workspaces</li><li>Recent Items</li><li>Favorites</li></ul>|```/home```|
+|[Onelake Catalog](https://app.powerbi.com/onelake/explore)|View all existing objects and create new ones|```/onelake/explore```|
 [ Monitoring Hub](https://app.fabric.microsoft.com/monitoringhub?experience=fabric-developer)|View and track the status of the activities<br>across all the workspaces for which you<br>have permissions within Microsoft Fabric.|```/montitoringhub```|
 
 <a name="bookmark-02" /><a>

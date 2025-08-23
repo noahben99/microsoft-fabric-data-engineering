@@ -1,11 +1,11 @@
-# 📥 Automated File Ingestion and ETL Trigger in Microsoft Fabric
+# Automated File Ingestion and ETL Trigger in Microsoft Fabric
 
-## 🎯 Goal
+## Goal
 Automate ingestion of Excel files received via email, process them using a Gen2 Dataflow, and maintain semantic clarity through controlled naming and pipeline orchestration.
 
 ---
 
-## 🛠️ Workflow Overview
+## Workflow Overview
 
 1. **Trigger**: Email with Excel attachment arrives
 2. **Power Automate Flow**:
@@ -19,7 +19,7 @@ Automate ingestion of Excel files received via email, process them using a Gen2 
 
 ---
 
-## ✅ Why This Approach Was Selected
+## Why This Approach Was Selected
 
 - **Gen2 Dataflow compatibility**: Files must reside in the Lakehouse root folder
 - **Simplified orchestration**: Power Automate handles file arrival and naming
@@ -28,7 +28,7 @@ Automate ingestion of Excel files received via email, process them using a Gen2 
 
 ---
 
-## 📌 Notes
+## Notes
 
 - File naming convention ensures discoverability and onboarding clarity
 - Pipeline can be extended to include post-ETL archiving or changelog logging

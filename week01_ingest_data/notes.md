@@ -1,6 +1,6 @@
 # 📚 Week 1 – Ingest data with Microsoft Fabric
 
-> Module link: [Ingest Data with Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/ingest-data-fabric/)  
+> Module link: [Ingest Data with Microsoft Fabric](https://learn.microsoft.com/en-us/training/paths/ingest-data-with-microsoft-fabric/)  
 > Dates: 2025-08-17 → YYYY‑MM‑DD
 
 ---
