@@ -1,6 +1,7 @@
 
 # Fabric UI
 
+- 🔗[OneLake catalog](#bookmark-00)
 - 🔗[Navigation Tools](#bookmark-01)
 - 🔗[Workspaces](#bookmark-02)
 - 🔗[Workspace Settings](#bookmark-03)
@@ -11,17 +12,15 @@
 - 🔗[Datasets](#bookmark-08)
 - 🔗[User Settings](#bookmark-09)
 
-<a name="bookmark-01" /><a>
 
 ## OneLake catalog
+<a name="bookmark-00" /><a>
 
-|**Data**|**Insights**|**Processes**|**Solutions**|**Configurations**|
-|---|---|---|---|---|
-|<ul><li>Semantic Models</li><li>Lakehouse</li><li>Datamarts</li><li>KQL Databases</li><li>SQL Analytics Endpoint</li><li>SQL Database</li><li>Warehouse</li><li>Warehouse Snapshot</li><li>Mirrored database</li></ul>|<ul><li>Report</li><li>Dashboard</li><li>Paginated Report</li><li>Org App</li><li>Exploration</li><li>Data Agent</li><li>Metric Set</li><li>Real-Time Dashbaord</li><li>Map</li></ul>|<ul><li>API for GraphQL</li><li>Activator</li><li>Apache Airflow Job</li><li>Azure Data Factory</li><li>Copy Job</li><li>Data Agent</li><li>Data Pipeline</li><li>Dataflow</li><li>Eventstream</li><li>KQL Queryset</li><li>ML Model</li><li>Mirrored database</li><li>Notebook</li><li>Spark Job Definition</li><li>User data</li></ul>|<ul><li>...</li></ul>|<ul><li>Environment</li><li>Variable Library</li></ul>|
+|<img src="..\images\one-lake-catalog-by-category.png" >
 
 ## Navigation Tools
 
-
+<a name="bookmark-01" /><a>
 ||||
 |---|---|---|
 |[ Home](https://app.fabric.microsoft.com/home?experience=fabric-developer)|<ul><li>Create A New Workspace</li><li>My Learning links</li><li>Recent Workspaces</li><li>Recent Items</li><li>Favorites</li></ul>|```/home```|
