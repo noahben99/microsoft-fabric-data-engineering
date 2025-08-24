@@ -8,50 +8,77 @@ function Get-TableOfContentsFromFolder {
         [string]$MarkdownFilePath
     )
 
-    $toc = @()
+    $tree = @{}
 
     # Normalize paths
     $sourcePath = (Resolve-Path $Path).Path
     $targetPath = (Resolve-Path $MarkdownFilePath).Path
-    # Write-Host "Source Path: $sourcePath"
-    # Write-Host "Target Path: $targetPath"
+
+    # Extract root folder name from $Path
+    $rootFolderName = (Split-Path $sourcePath -Leaf).ToLower() + "/"
 
     # Calculate relative path from MarkdownFilePath to Path
     $uriTarget = New-Object System.Uri("$targetPath\")
     $uriSource = New-Object System.Uri("$sourcePath\")
     $relativePath = $uriTarget.MakeRelativeUri($uriSource).ToString() -replace '%20', ' ' -replace '/', '/'
-    # Write-Host "Relative Path: $relativePath"
 
     # Get all markdown files recursively
     $markdownFiles = Get-ChildItem -Path $sourcePath -Recurse -Filter *.md
-    # Write-Host "Markdown files found: $($markdownFiles.Count)"
 
     foreach ($file in $markdownFiles) {
-        $fileContent = Get-Content $file.FullName
+        $fileContent = Get-Content $file.FullName -Encoding UTF8
         $fileName = $file.Name
         $fileDirectory = Split-Path $file.FullName -Parent
+        $relativeDir = $fileDirectory.Substring($sourcePath.Length).TrimStart('\') -replace '\\', '/'
 
-        # Determine subfolder path relative to $Path
-        $subfolder = $fileDirectory.Substring($sourcePath.Length).TrimStart('\') -replace '\\', '/'
-        $subfolderPath = if ($subfolder) { "$subfolder" } else { "" }
+        $folderKey = if ($relativeDir) { $relativeDir } else { $rootFolderName.TrimEnd('/') }
+        if (-not $tree.ContainsKey($folderKey)) {
+            $tree[$folderKey] = @{}
+        }
+
+        $tree[$folderKey][$fileName] = @()
 
         foreach ($line in $fileContent) {
             if ($line -match '^\s*#{1,2}\s+(.*)') {
                 $headingText = $Matches[1].Trim()
-                # Write-Host "Matched heading: $headingText"
 
-                # Normalize fragment for Markdown anchor
-                $fragmentSource = $headingText -replace '\p{So}', '' -replace '[^\w\s-]', '' -replace '\s+', '-'
+                # Remove emoji and symbols using Unicode ranges
+                $cleanHeading = $headingText -replace '[\uD800-\uDBFF][\uDC00-\uDFFF]', '' # surrogate pairs
+                $cleanHeading = $cleanHeading -replace '[^\w\s-]', ''                      # remove punctuation
+                $fragmentSource = $cleanHeading -replace '\s+', '-'  
                 $fragment = $fragmentSource.ToLower()
 
                 # Construct valid Markdown link
-                $link = "$relativePath/$subfolderPath/$fileName#$fragment" -replace '//', '/'
-                $toc += "[${headingText}]($link)"
-                # Write-Host "TOC Entry: [$headingText]($link)"
+                $link = "$relativePath/$folderKey/$fileName#$fragment" -replace '\\', '/' -replace '//+', '/'
+                $tree[$folderKey][$fileName] += "- [$headingText]($link)"
             }
         }
     }
 
-    # Write-Host "TOC count: $($toc.Count)"
-    return $toc
+    $outputLines = @()
+    $outputLines += "- $rootFolderName"
+    foreach ($folder in $tree.Keys | Sort-Object) {
+        $folderIndent = "    "
+        $folderPath = "$folder/"
+        $outputLines += "$folderIndent- $folderPath"
+
+        foreach ($file in $tree[$folder].Keys | Sort-Object) {
+            $fileIndent = "$folderIndent    "
+
+            # Add file name as a markdown link (no anchor)
+            $fileLink = "$relativePath/$folder/$file" -replace '\\', '/' -replace '//+', '/'
+            $outputLines += "$fileIndent- [$file]($fileLink)"
+
+            foreach ($link in $tree[$folder][$file]) {
+                $linkIndent = "$fileIndent    "
+                $outputLines += "$linkIndent$link"
+            }
+        }
+    }
+
+    # Write to MarkdownFilePath
+    $outputLines | Set-Content -Path $MarkdownFilePath -Encoding UTF8
+
+    # Open the file after creation
+    Start-Process -FilePath $MarkdownFilePath
 }
