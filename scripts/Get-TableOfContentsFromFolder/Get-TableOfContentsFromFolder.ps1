@@ -69,7 +69,8 @@
             $fileIndent = "${folderIndent}    "
             $filePath = "$rootFolderName/$folder/$file"
             $fileLink = "$githubBaseUrl/$filePath"
-            $outputLines += "${fileIndent}- 📄 [$file]($fileLink)" -replace '.md', ''
+            $fileNameWithoutExtension = "$file" -replace '.md', ''
+            $outputLines += "${fileIndent}- 📄 [$fileNameWithoutExtension]($fileLink)" 
 
             foreach ($link in $tree[$folder][$file]) {
                 $linkIndent = "${fileIndent}    "
