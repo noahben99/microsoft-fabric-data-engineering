@@ -1,7 +1,7 @@
 
 # Fabric UI
 
-- 🔗[OneLake catalog](#bookmark-00)
+
 - 🔗[Navigation Tools](#bookmark-01)
 - 🔗[Workspaces](#bookmark-02)
 - 🔗[Workspace Settings](#bookmark-03)
@@ -11,13 +11,11 @@
 - 🔗[Data Factory](#bookmark-07)
 - 🔗[Datasets](#bookmark-08)
 - 🔗[User Settings](#bookmark-09)
+- 🔗[OneLake catalog](#bookmark-00)
+- 🔗[What New Items can I add to my workspace?](#bookmark-a)
 
 
-## OneLake catalog
-<a name="bookmark-00" /><a>
-
-|<img src="..\images\one-lake-catalog-by-category.png" >
-
+---
 ## Navigation Tools
 
 <a name="bookmark-01" /><a>
@@ -28,6 +26,8 @@
 [ Monitoring Hub](https://app.fabric.microsoft.com/monitoringhub?experience=fabric-developer)|View and track the status of the activities<br>across all the workspaces for which you<br>have permissions within Microsoft Fabric.|```/montitoringhub```|
 
 <a name="bookmark-02" /><a>
+
+---
 ## Workspaces
 
 ||||
@@ -38,6 +38,8 @@
 
 
 <a name="bookmark-03" /><a>
+
+---
 ## Workspace Settings
 
 ||||
@@ -54,6 +56,8 @@
 
 
 <a name="bookmark-04" /><a>
+
+---
 ## Lake Warehouses
 ||||
 |---|---|---|
@@ -64,6 +68,8 @@
 
 
 <a name="bookmark-05" /><a>
+
+---
 ## Mirrored Lakehouses
 ||||
 |---|---|---|
@@ -72,6 +78,8 @@
 
 
 <a name="bookmark-06" /><a>
+
+---
 ## Lakehouses
 
 ||||
@@ -81,6 +89,8 @@
 
 
 <a name="bookmark-07" /><a>
+
+---
 ## Data Factory
 
 ||||
@@ -91,6 +101,8 @@
 {dataflow_id}```|
 
 <a name="bookmark-08" /><a>
+
+---
 ## Datasets
 ||||
 |---|---|---|
@@ -103,6 +115,8 @@
 
 
 <a name="bookmark-09" /><a>
+
+---
 ## User Settings
 
 ||||
@@ -113,3 +127,17 @@
 |[Power BI Settings](https://app.fabric.microsoft.com/user/user-settings/notifications/settings)|**Email**<br>• Send me an email digest of updates to my frequents and content viewed by my organization<br><br>**Teams**<br>• Send me a notification on the latest activity in Power BI<br>• Send me a reminder when someone shares an item with me<br>• Send me a reminder when someone requests access to an item I own|```/user/user-settings/notifications/settings```|
 |[Item Settings](https://app.fabric.microsoft.com/user/user-settings/notifications/item-settings)|**Power BI**<br>• Use ArcGIS for Power BI|```/user/user-settings/notifications/item-settings```|
 |[Developer Settings](https://app.fabric.microsoft.com/user/user-settings/notifications/developer-settings)|**Power BI Developer mode**<br>• Turn developer mode on when you want to develop a Power BI visual.|```/user/user-settings/notifications/developer-settings```|
+
+
+---
+## OneLake catalog
+<a name="bookmark-00" /><a>
+
+<img src="..\images\one-lake-catalog-by-category.png" >
+
+
+---
+## What New Items can I add to my workspace?
+<a name="bookmark-a" /><a>
+
+<img src="..\images\create-new-objects-options.png" >

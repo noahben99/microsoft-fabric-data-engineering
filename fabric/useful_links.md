@@ -3,7 +3,7 @@
 ## Official Microsoft Resources
 - [Microsoft Learn – DP‑700 Collection](https://learn.microsoft.com/en-us/certifications/exams/dp-700)
 - [Microsoft Learn – Course-syllabus](https://learn.microsoft.com/en-us/training/courses/dp-700t00#course-syllabus)
-- [Microsoft Learn – Collections: DP-700 Fabric Study Plan](https://learn.microsoft.com/en-us/collections/egnxfotg0mj43k)
+- [My Collections: DP-700 Fabric Study Plan](https://learn.microsoft.com/en-us/collections/egnxfotg0mj43k)
 - [Official plan: Get Certified! Become a Fabric Data Engineer (Exam DP-700)](https://learn.microsoft.com/en-us/plans/3gjnikype48pd7?source=docs&sharingId=B06A4C1C2523BCEB)
 - [Fabric Documentation](https://learn.microsoft.com/en-us/fabric/)
 - [Exam Sandbox](https://learn.microsoft.com/en-us/certifications/exam-sandbox)
@@ -26,3 +26,11 @@
 -[Read the latest posts in the Microsoft Fabric blog](https://aka.ms/fabric-tech-blog)
 -[Join the Microsoft Fabric Community to engage with users and product teams](https://aka.ms/fabric-community)
 
+
+
+[Get started with lakehouses in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/get-started-lakehouses/)
+[Use Apache Spark in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/use-apache-spark-work-files-lakehouse/)
+[Work with Delta Lake tables in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/work-delta-lake-tables-fabric/)
+[Ingest Data with Dataflows Gen2 in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/use-dataflow-gen-2-fabric/)
+[Orchestrate processes and data movement with Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/use-data-factory-pipelines-fabric/)
+[Organize a Fabric lakehouse using medallion architecture design](https://learn.microsoft.com/en-us/training/modules/describe-medallion-architecture/)
