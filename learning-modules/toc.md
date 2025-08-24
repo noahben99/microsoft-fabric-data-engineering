@@ -1,4 +1,4 @@
-﻿- 📁 fabric/
+﻿- 📁 fabric
     - 📁 data-factory/
         - 📄 [azure-vs-fabric](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/data-factory/azure-vs-fabric.md)
             - 🔗 [Differences between Azure Data Factory and Fabric Data Factory](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/data-factory/azure-vs-fabric.md#differences-between-azure-data-factory-and-fabric-data-factory)

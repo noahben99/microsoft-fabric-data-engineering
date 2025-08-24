@@ -59,7 +59,7 @@
     }
 
     $outputLines = @()
-    $outputLines += "- 📁 $rootFolderName/"
+    $outputLines += "- 📁 $rootFolderName"
     foreach ($folder in $tree.Keys | Sort-Object) {
         $folderIndent = "    "
         $folderPath = "$folder/"
