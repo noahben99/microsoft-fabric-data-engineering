@@ -26,7 +26,7 @@ function Get-TableOfContentsFromFolder {
     $markdownFiles = Get-ChildItem -Path $sourcePath -Recurse -Filter *.md
 
     foreach ($file in $markdownFiles) {
-        $fileContent = Get-Content $file.FullName -Encoding UTF8
+        $fileContent = Get-Content $file.FullName
         $fileName = $file.Name
         $fileDirectory = Split-Path $file.FullName -Parent
         $relativeDir = $fileDirectory.Substring($sourcePath.Length).TrimStart('\') -replace '\\', '/'
@@ -42,10 +42,8 @@ function Get-TableOfContentsFromFolder {
             if ($line -match '^\s*#{1,2}\s+(.*)') {
                 $headingText = $Matches[1].Trim()
 
-                # Remove emoji and symbols using Unicode ranges
-                $cleanHeading = $headingText -replace '[\uD800-\uDBFF][\uDC00-\uDFFF]', '' # surrogate pairs
-                $cleanHeading = $cleanHeading -replace '[^\w\s-]', ''                      # remove punctuation
-                $fragmentSource = $cleanHeading -replace '\s+', '-'  
+                # Normalize fragment for Markdown anchor
+                $fragmentSource = $headingText -replace '\p{So}', '' -replace '[^\w\s-]', '' -replace '\s+', '-'
                 $fragment = $fragmentSource.ToLower()
 
                 # Construct valid Markdown link
