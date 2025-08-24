@@ -17,7 +17,7 @@ function Get-TableOfContentsFromFolder {
     $sourcePath = (Resolve-Path $Path).Path
 
     # Extract root folder name from $Path
-    $rootFolderName = (Split-Path $sourcePath -Leaf).ToLower() + "/"
+    $rootFolderName = (Split-Path $sourcePath -Leaf)
 
     # Get all markdown files recursively
     $markdownFiles = Get-ChildItem -Path $sourcePath -Recurse -Filter *.md
@@ -28,7 +28,7 @@ function Get-TableOfContentsFromFolder {
         $fileDirectory = Split-Path $file.FullName -Parent
         $relativeDir = $fileDirectory.Substring($sourcePath.Length).TrimStart('\') -replace '\\', '/'
 
-        $folderKey = if ($relativeDir) { $relativeDir } else { $rootFolderName.TrimEnd('/') }
+        $folderKey = if ($relativeDir) { $relativeDir } else { $rootFolderName }
         if (-not $tree.ContainsKey($folderKey)) {
             $tree[$folderKey] = @{}
         }
@@ -43,8 +43,12 @@ function Get-TableOfContentsFromFolder {
                 $fragmentSource = $headingText -replace '\p{So}', '' -replace '[^\w\s-]', '' -replace '\s+', '-'
                 $fragment = $fragmentSource.ToLower()
 
-                # Construct GitHub-safe absolute link
-                $linkPath = if ($relativeDir) { "$relativeDir/$fileName" } else { "$fileName" }
+                # Construct GitHub-safe absolute link with root folder prefix
+                $linkPath = if ($relativeDir) {
+                    "$rootFolderName/$relativeDir/$fileName"
+                } else {
+                    "$rootFolderName/$fileName"
+                }
                 $link = "$githubBaseUrl/$linkPath#$fragment" -replace '//+', '/'
                 $tree[$folderKey][$fileName] += "- [$headingText]($link)"
             }
@@ -52,7 +56,7 @@ function Get-TableOfContentsFromFolder {
     }
 
     $outputLines = @()
-    $outputLines += "- $rootFolderName"
+    $outputLines += "- $rootFolderName/"
     foreach ($folder in $tree.Keys | Sort-Object) {
         $folderIndent = "    "
         $folderPath = "$folder/"
@@ -61,8 +65,8 @@ function Get-TableOfContentsFromFolder {
         foreach ($file in $tree[$folder].Keys | Sort-Object) {
             $fileIndent = "$folderIndent    "
 
-            # GitHub-safe absolute link to file (no anchor)
-            $filePath = if ($folder) { "$folder/$file" } else { "$file" }
+            # GitHub-safe absolute link to file (no anchor), with root folder prefix
+            $filePath = "$rootFolderName/$folder/$file"
             $fileLink = "$githubBaseUrl/$filePath" -replace '//+', '/'
             $outputLines += "$fileIndent- [$file]($fileLink)"
 
