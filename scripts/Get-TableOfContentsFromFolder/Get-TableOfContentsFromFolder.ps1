@@ -23,7 +23,7 @@ function Get-TableOfContentsFromFolder {
     $markdownFiles = Get-ChildItem -Path $sourcePath -Recurse -Filter *.md
 
     foreach ($file in $markdownFiles) {
-        $fileContent = Get-Content $file.FullName
+        $fileContent = Get-Content $file.FullName -Encoding UTF8
         $fileName = $file.Name
         $fileDirectory = Split-Path $file.FullName -Parent
         $relativeDir = $fileDirectory.Substring($sourcePath.Length).TrimStart('\') -replace '\\', '/'
@@ -40,7 +40,10 @@ function Get-TableOfContentsFromFolder {
                 $headingText = $Matches[1].Trim()
 
                 # Normalize fragment for Markdown anchor
-                $fragmentSource = $headingText -replace '\p{So}', '' -replace '[^\w\s-]', '' -replace '\s+', '-'
+                # Remove emoji and symbols using Unicode ranges
+                $cleanHeading = $headingText -replace '[\uD800-\uDBFF][\uDC00-\uDFFF]', '' # surrogate pairs
+                $cleanHeading = $cleanHeading -replace '[^\w\s-]', ''                      # remove punctuation
+                $fragmentSource = $cleanHeading -replace '\s+', '-'                        # normalize spaces
                 $fragment = $fragmentSource.ToLower()
 
                 # Construct GitHub-safe absolute link with root folder prefix
