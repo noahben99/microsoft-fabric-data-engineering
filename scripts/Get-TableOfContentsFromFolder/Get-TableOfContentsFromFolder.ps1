@@ -53,23 +53,23 @@
                 }
 
                 $link = "$githubBaseUrl/$linkPath#$fragment"
-                $tree[$folderKey][$fileName] += "🔗 [$headingText]($link)"
+                $tree[$folderKey][$fileName] += "- 🔗 [$headingText]($link)"
             }
         }
     }
 
     $outputLines = @()
-    $outputLines += "📁 $rootFolderName/"
+    $outputLines += "- 📁 $rootFolderName/"
     foreach ($folder in $tree.Keys | Sort-Object) {
         $folderIndent = "    "
         $folderPath = "$folder/"
-        $outputLines += "${folderIndent}📁 $folderPath"
+        $outputLines += "${folderIndent}- 📁 $folderPath"
 
         foreach ($file in $tree[$folder].Keys | Sort-Object) {
             $fileIndent = "${folderIndent}    "
             $filePath = "$rootFolderName/$folder/$file"
             $fileLink = "$githubBaseUrl/$filePath"
-            $outputLines += "${fileIndent}📄 [$file]($fileLink)"
+            $outputLines += "${fileIndent}- 📄 [$file]($fileLink)"
 
             foreach ($link in $tree[$folder][$file]) {
                 $linkIndent = "${fileIndent}    "
