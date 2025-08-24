@@ -1,4 +1,4 @@
-function Get-TableOfContentsFromFolder {
+﻿function Get-TableOfContentsFromFolder {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
@@ -40,7 +40,6 @@ function Get-TableOfContentsFromFolder {
                 $headingText = $Matches[1].Trim()
 
                 # Normalize fragment for Markdown anchor
-                # Remove emoji and symbols using Unicode ranges
                 $cleanHeading = $headingText -replace '[\uD800-\uDBFF][\uDC00-\uDFFF]', '' # surrogate pairs
                 $cleanHeading = $cleanHeading -replace '[^\w\s-]', ''                      # remove punctuation
                 $fragmentSource = $cleanHeading -replace '\s+', '-'                        # normalize spaces
@@ -53,31 +52,28 @@ function Get-TableOfContentsFromFolder {
                     "$rootFolderName/$fileName"
                 }
 
-                # Ensure https:// is preserved — no collapsing slashes
                 $link = "$githubBaseUrl/$linkPath#$fragment"
-                $tree[$folderKey][$fileName] += "- [$headingText]($link)"
+                $tree[$folderKey][$fileName] += "🔗 [$headingText]($link)"
             }
         }
     }
 
     $outputLines = @()
-    $outputLines += "- $rootFolderName/"
+    $outputLines += "📁 $rootFolderName/"
     foreach ($folder in $tree.Keys | Sort-Object) {
         $folderIndent = "    "
         $folderPath = "$folder/"
-        $outputLines += "$folderIndent- $folderPath"
+        $outputLines += "${folderIndent}📁 $folderPath"
 
         foreach ($file in $tree[$folder].Keys | Sort-Object) {
-            $fileIndent = "$folderIndent    "
-
-            # GitHub-safe absolute link to file (no anchor), with root folder prefix
+            $fileIndent = "${folderIndent}    "
             $filePath = "$rootFolderName/$folder/$file"
             $fileLink = "$githubBaseUrl/$filePath"
-            $outputLines += "$fileIndent- [$file]($fileLink)"
+            $outputLines += "${fileIndent}📄 [$file]($fileLink)"
 
             foreach ($link in $tree[$folder][$file]) {
-                $linkIndent = "$fileIndent    "
-                $outputLines += "$linkIndent$link"
+                $linkIndent = "${fileIndent}    "
+                $outputLines += "${linkIndent}$link"
             }
         }
     }
