@@ -1,12 +1,12 @@
 ﻿- 📁 fabric
-    - 📁 data-factory/
+    - 📁 data-factory
         - 📄 [azure-vs-fabric](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/data-factory/azure-vs-fabric.md)
             - 🔗 [Differences between Azure Data Factory and Fabric Data Factory](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/data-factory/azure-vs-fabric.md#differences-between-azure-data-factory-and-fabric-data-factory)
         - 📄 [data-factory-workload](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/data-factory/data-factory-workload.md)
             - 🔗 [Microsoft Fabric Data Factory Workloads](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/data-factory/data-factory-workload.md#microsoft-fabric-data-factory-workloads)
             - 🔗 [“Data Factory” in Fabric: A Conceptual Layer, Not a UI Label](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/data-factory/data-factory-workload.md#data-factory-in-fabric-a-conceptual-layer-not-a-ui-label)
             - 🔗 [Strategic Implication for You](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/data-factory/data-factory-workload.md#strategic-implication-for-you)
-    - 📁 dataflows/
+    - 📁 dataflows
         - 📄 [dataflow-destination](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/dataflows/dataflow-destination.md)
             - 🔗 [Refreshing Column Mapping in Dataflows Gen2](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/dataflows/dataflow-destination.md#refreshing-column-mapping-in-dataflows-gen2)
             - 🔗 [What Happens When Source Schema Changes?](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/dataflows/dataflow-destination.md#what-happens-when-source-schema-changes)
@@ -30,7 +30,7 @@
         - 📄 [save-vs-save-and-run](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/dataflows/save-vs-save-and-run.md)
         - 📄 [sql-views-vs-dataflows](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/dataflows/sql-views-vs-dataflows.md)
             - 🔗 [SQL Views and Stored Procedures vs Dataflows](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/dataflows/sql-views-vs-dataflows.md#sql-views-and-stored-procedures-vs-dataflows)
-    - 📁 engineering-concepts/
+    - 📁 engineering-concepts
         - 📄 [data-storage-terms](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/engineering-concepts/data-storage-terms.md)
             - 🔗 [Fabric Data Storage Terminology](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/engineering-concepts/data-storage-terms.md#fabric-data-storage-terminology)
             - 🔗 [How They Relate](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/engineering-concepts/data-storage-terms.md#how-they-relate)
@@ -66,7 +66,7 @@
             - 🔗 [Why This Choice Was Selected](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/engineering-concepts/storage-options.md#why-this-choice-was-selected)
         - 📄 [transactional-tables](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/engineering-concepts/transactional-tables.md)
             - 🔗 [Transactional Tables and Star Schemas](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/engineering-concepts/transactional-tables.md#transactional-tables-and-star-schemas)
-    - 📁 fabric/
+    - 📁 fabric
         - 📄 [fabric-ui](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/fabric/fabric-ui.md)
             - 🔗 [Fabric UI](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/fabric-ui.md#fabric-ui)
             - 🔗 [Navigation Tools](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/fabric-ui.md#navigation-tools)
@@ -87,7 +87,7 @@
             - 🔗 [Community & Blogs](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/useful_links.md#community-blogs)
             - 🔗 [Governance & Best Practices](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/useful_links.md#governance-best-practices)
             - 🔗 [Learn more about Microsoft Fabric](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/useful_links.md#learn-more-about-microsoft-fabric)
-    - 📁 pipelines/
+    - 📁 pipelines
         - 📄 [concepts](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/pipelines/concepts.md)
         - 📄 [file-ingestion-from-email](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/pipelines/file-ingestion-from-email.md)
             - 🔗 [Automated File Ingestion and ETL Trigger in Microsoft Fabric](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/pipelines/file-ingestion-from-email.md#automated-file-ingestion-and-etl-trigger-in-microsoft-fabric)
@@ -102,7 +102,7 @@
             - 🔗 [Step-by-Step Setup](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/pipelines/pipeline-trigger-when-a-file-is-added.md#step-by-step-setup)
             - 🔗 [Notes](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/pipelines/pipeline-trigger-when-a-file-is-added.md#notes)
             - 🔗 [Reference](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/pipelines/pipeline-trigger-when-a-file-is-added.md#reference)
-    - 📁 semantic-models/
+    - 📁 semantic-models
         - 📄 [create-semantic-model-from-fabric](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/semantic-models/create-semantic-model-from-fabric.md)
             - 🔗 [Create a semantic model in Fabric and connect to Lakehouse](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/semantic-models/create-semantic-model-from-fabric.md#create-a-semantic-model-in-fabric-and-connect-to-lakehouse)
             - 🔗 [In Fabric, navigate to Lakehouse](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/semantic-models/create-semantic-model-from-fabric.md#in-fabric-navigate-to-lakehouse)
@@ -129,11 +129,11 @@
             - 🔗 [Unable to add tables or manage relationships](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/semantic-models/troubleshooting-cannot-edit-tables.md#unable-to-add-tables-or-manage-relationships)
         - 📄 [use-a-semantic-model-in-pbi](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/semantic-models/use-a-semantic-model-in-pbi.md)
             - 🔗 [Semantic model created in Fabric > Connect to that model in Power BI Desktop](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/semantic-models/use-a-semantic-model-in-pbi.md#semantic-model-created-in-fabric-connect-to-that-model-in-power-bi-desktop)
-    - 📁 sql-databases/
+    - 📁 sql-databases
         - 📄 [database-options](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/sql-databases/database-options.md)
             - 🔗 [SQL analytics endpoint in a Fabric lakehouse and a traditional SQL database in Azure](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/sql-databases/database-options.md#sql-analytics-endpoint-in-a-fabric-lakehouse-and-a-traditional-sql-database-in-azure)
             - 🔗 [SQL Write Access in Microsoft Fabric](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/sql-databases/database-options.md#sql-write-access-in-microsoft-fabric)
         - 📄 [sql-database](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/sql-databases/sql-database.md)
             - 🔗 [How to Create a SQL Server Alias (Windows)](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/sql-databases/sql-database.md#how-to-create-a-sql-server-alias-windows)
-    - 📁 workspaces/
+    - 📁 workspaces
         - 📄 [create-a-workspace](https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/workspaces/create-a-workspace.md)

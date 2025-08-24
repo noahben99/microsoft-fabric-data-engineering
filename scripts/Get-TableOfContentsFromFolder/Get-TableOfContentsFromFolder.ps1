@@ -62,7 +62,7 @@
     $outputLines += "- 📁 $rootFolderName"
     foreach ($folder in $tree.Keys | Sort-Object) {
         $folderIndent = "    "
-        $folderPath = "$folder/"
+        $folderPath = "$folder"
         $outputLines += "${folderIndent}- 📁 $folderPath"
 
         foreach ($file in $tree[$folder].Keys | Sort-Object) {
