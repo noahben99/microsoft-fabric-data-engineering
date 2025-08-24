@@ -10,17 +10,14 @@ function Get-TableOfContentsFromFolder {
 
     $tree = @{}
 
-    # Normalize paths
+    # Hard-coded GitHub base URL — CHANGE THIS if using a different repo or branch
+    $githubBaseUrl = "https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main"
+
+    # Normalize source path
     $sourcePath = (Resolve-Path $Path).Path
-    $targetPath = (Resolve-Path $MarkdownFilePath).Path
 
     # Extract root folder name from $Path
     $rootFolderName = (Split-Path $sourcePath -Leaf).ToLower() + "/"
-
-    # Calculate relative path from MarkdownFilePath to Path
-    $uriTarget = New-Object System.Uri("$targetPath\")
-    $uriSource = New-Object System.Uri("$sourcePath\")
-    $relativePath = $uriTarget.MakeRelativeUri($uriSource).ToString() -replace '%20', ' ' -replace '/', '/'
 
     # Get all markdown files recursively
     $markdownFiles = Get-ChildItem -Path $sourcePath -Recurse -Filter *.md
@@ -46,8 +43,9 @@ function Get-TableOfContentsFromFolder {
                 $fragmentSource = $headingText -replace '\p{So}', '' -replace '[^\w\s-]', '' -replace '\s+', '-'
                 $fragment = $fragmentSource.ToLower()
 
-                # Construct valid Markdown link
-                $link = "$relativePath/$folderKey/$fileName#$fragment" -replace '\\', '/' -replace '//+', '/'
+                # Construct GitHub-safe absolute link
+                $linkPath = if ($relativeDir) { "$relativeDir/$fileName" } else { "$fileName" }
+                $link = "$githubBaseUrl/$linkPath#$fragment" -replace '//+', '/'
                 $tree[$folderKey][$fileName] += "- [$headingText]($link)"
             }
         }
@@ -63,8 +61,9 @@ function Get-TableOfContentsFromFolder {
         foreach ($file in $tree[$folder].Keys | Sort-Object) {
             $fileIndent = "$folderIndent    "
 
-            # Add file name as a markdown link (no anchor)
-            $fileLink = "$relativePath/$folder/$file" -replace '\\', '/' -replace '//+', '/'
+            # GitHub-safe absolute link to file (no anchor)
+            $filePath = if ($folder) { "$folder/$file" } else { "$file" }
+            $fileLink = "$githubBaseUrl/$filePath" -replace '//+', '/'
             $outputLines += "$fileIndent- [$file]($fileLink)"
 
             foreach ($link in $tree[$folder][$file]) {
