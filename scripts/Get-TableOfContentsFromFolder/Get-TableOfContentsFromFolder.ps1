@@ -49,7 +49,9 @@ function Get-TableOfContentsFromFolder {
                 } else {
                     "$rootFolderName/$fileName"
                 }
-                $link = "$githubBaseUrl/$linkPath#$fragment" -replace '//+', '/'
+
+                # Ensure https:// is preserved — no collapsing slashes
+                $link = "$githubBaseUrl/$linkPath#$fragment"
                 $tree[$folderKey][$fileName] += "- [$headingText]($link)"
             }
         }
@@ -67,7 +69,7 @@ function Get-TableOfContentsFromFolder {
 
             # GitHub-safe absolute link to file (no anchor), with root folder prefix
             $filePath = "$rootFolderName/$folder/$file"
-            $fileLink = "$githubBaseUrl/$filePath" -replace '//+', '/'
+            $fileLink = "$githubBaseUrl/$filePath"
             $outputLines += "$fileIndent- [$file]($fileLink)"
 
             foreach ($link in $tree[$folder][$file]) {
