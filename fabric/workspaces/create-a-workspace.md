@@ -33,4 +33,18 @@
     - Delegated settings
         - OneLake settings
         - Copilot and Azure OpenAI Service​
+        
 
+---
+**Create workspaces**
+Workspaces are collaborative environments where you can create and manage items like lakehouses, warehouses, and reports. All data is stored in OneLake and accessed through workspaces. Workspaces also support data lineage view, providing a visual view of data flow and dependencies to enhance transparency and decision-making.
+
+In Workspace settings, you can configure:
+
+- License type to use Fabric features.
+- OneDrive access for the workspace.
+- Azure Data Lake Gen2 Storage connection.
+- Git integration for version control.
+- Spark workload settings for performance optimization.
+
+You can manage workspace access through four roles: admin, contributor, member, and viewer. These roles apply to all items in a workspace and should be reserved for collaboration. For more granular access control, use item-level permissions based on business needs.        
