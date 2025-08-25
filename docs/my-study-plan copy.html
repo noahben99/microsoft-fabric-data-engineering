@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .in-progress {
+    background-image: url('/docs/assets/in-progress.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 30px;
+    height: 40px;
+  }
+
+  .not-started {
+    background-image: url('/docs/assets/not-started.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 30px;
+    height: 40px;
+  }
+
+
+  .complete {
+    background-image: url('/docs/assets/complete.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 30px;
+    height: 40px;
+  }
+
+  table {
+    border-collapse: collapse;
+    /* Ensures borders don't double up */
+
+
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #000;
+    /* Black border for outer and inner lines */
+    padding: .5rem;
+  }
+
+  th {
+    background-color: cornsilk;
+  }
+</style>
+
+<body>
+
+  <h2>My DP-700 Fabric Study Plan</h2>
+  <a href="https://learn.microsoft.com/en-us/collections/egnxfotg0mj43k">Microsoft Learning</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>Module</th>
+        <th>My Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="complete">&nbsp;</td>
+        <td><a
+            href="https://learn.microsoft.com/en-us/training/modules/introduction-end-analytics-use-microsoft-fabric/">Introduction
+            to end-to-end analytics using Microsoft Fabric</a></td>
+        <td style="display: block;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/onelake.md">Link</a>
+            </li>
+              <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/fabric/workloads.md">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/get-started-lakehouses/">Get started with
+            lakehouses in Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/use-apache-spark-work-files-lakehouse/">Use
+            Apache Spark in Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/work-delta-lake-tables-fabric/">Work with Delta
+            Lake tables in Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="complete">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/use-dataflow-gen-2-fabric/">Ingest Data with
+            Dataflows Gen2 in Microsoft Fabric</a></td>
+        <td>
+          <ul>
+            <li><a
+                href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/dataflows/dataflow-destination.md">dataflow-destination</a>
+            </li>
+            <li><a
+                href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/dataflows/dataflow-documentation.md">dataflow-documentation</a>
+            </li>
+            <li><a
+                href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/dataflows/gen1-vs-gen2.md">gen1-vs-gen2</a>
+            </li>
+            <li><a
+                href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/dataflows/get-output-schema-definition.md">get-output-schema-definition</a>
+            </li>
+            <li><a
+                href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/dataflows/power-query-online.md">power-query-online</a>
+            </li>
+            <li><a
+                href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/dataflows/query-folding.md">query-folding</a>
+            </li>
+            <li><a
+                href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/dataflows/save-vs-save-and-run.md">save-vs-save-and-run</a>
+            </li>
+            <li><a
+                href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/dataflows/sql-views-vs-dataflows.md">sql-views-vs-dataflows</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/use-data-factory-pipelines-fabric/">Orchestrate
+            processes and data movement with Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/describe-medallion-architecture/">Organize a
+            Fabric lakehouse using medallion architecture design</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/query-data-kql-database-microsoft-fabric/">Work
+            with real-time data in a Microsoft Fabric eventhouse</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/get-started-kusto-fabric/">Get started with
+            Real-Time Intelligence in Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/explore-event-streams-microsoft-fabric/">Use
+            real-time eventstreams in Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a
+            href="https://learn.microsoft.com/en-us/training/modules/create-real-time-dashboards-microsoft-fabric/">Create
+            Real-Time Dashboards with Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/get-started-data-warehouse/">Get started with
+            data warehouses in Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a
+            href="https://learn.microsoft.com/en-us/training/modules/load-data-into-microsoft-fabric-data-warehouse/">Load
+            data into a Microsoft Fabric data warehouse</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/query-data-warehouse-microsoft-fabric/">Query a
+            data warehouse in Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/monitor-fabric-data-warehouse/">Monitor a
+            Microsoft Fabric data warehouse</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a
+            href="https://learn.microsoft.com/en-us/training/modules/secure-data-warehouse-in-microsoft-fabric/">Secure
+            a Microsoft Fabric data warehouse</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/implement-cicd-in-fabric/">Implement CI/CD in
+            Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/monitor-fabric-items/">Monitor activities in
+            Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/secure-data-access-in-fabric/">Secure data
+            access in Microsoft Fabric</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="not-started">&nbsp;</td>
+        <td><a href="https://learn.microsoft.com/en-us/training/modules/administer-fabric/">Administer a Microsoft
+            Fabric environment</a></td>
+        <td style="display: none;">
+          <ul>
+            <li><a href="https://github.com/noahben99/microsoft-fabric-data-engineering/blob/main/*********">Link</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</body>
+
+</html>
