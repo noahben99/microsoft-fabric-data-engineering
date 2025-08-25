@@ -97,8 +97,7 @@
 |---|---|---|
 |[manage a pipeline](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/pipelines/246b6946-7e47-48fe-bb9c-e6cea141581e?experience=fabric-developer)|**<span style='color:#e56845;font-weight:800;text-decoration:underline'>Data Factory**|```/groups/{group_id}/pipelines/{pipeline_id}```|
 |[ manage a dataflow](https://app.fabric.microsoft.com/groups/de54c96a-73b9-4a80-b764-55b55da97475/dataflows-gen2/97fcf54b-aa42-43c3-9177-25751d117932)|**<span style='color:#e56845;font-weight:800;text-decoration:underline'>Power Query**|```/groups/{group_id}/dataflows-gen2/{dataflow_id}```|
-|[ get objects in a dataflow](https://app.fabric.microsoft.com/datahub/artifacts/97fcf54b-aa42-43c3-9177-25751d117932)|View existing objects in the dataflow with links to explore each one.|```/datahub/artifacts/
-{dataflow_id}```|
+|[ get objects in a dataflow](https://app.fabric.microsoft.com/datahub/artifacts/97fcf54b-aa42-43c3-9177-25751d117932)|View existing objects in the dataflow with links to explore each one.|```/datahub/artifacts/{dataflow_id}```|
 
 <a name="bookmark-08" /><a>
 

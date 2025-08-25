@@ -20,17 +20,17 @@
  
 ## Learn more about Microsoft Fabric
 
--[Start a Microsoft Fabric trial](https://aka.ms/fabric)
--[Visit the Microsoft Fabric website](https://aka.ms/microsoft-fabric)
--[Check out the Microsoft Fabric documentation](https://learn.microsoft.com/fabric/)
--[Read the latest posts in the Microsoft Fabric blog](https://aka.ms/fabric-tech-blog)
--[Join the Microsoft Fabric Community to engage with users and product teams](https://aka.ms/fabric-community)
+- [Start a Microsoft Fabric trial](https://aka.ms/fabric)
+- [Visit the Microsoft Fabric website](https://aka.ms/microsoft-fabric)
+- [Check out the Microsoft Fabric documentation](https://learn.microsoft.com/fabric/)
+- [Read the latest posts in the Microsoft Fabric blog](https://aka.ms/fabric-tech-blog)
+- [Join the Microsoft Fabric Community to engage with users and product teams](https://aka.ms/fabric-community)
 
 
-
-[Get started with lakehouses in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/get-started-lakehouses/)
-[Use Apache Spark in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/use-apache-spark-work-files-lakehouse/)
-[Work with Delta Lake tables in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/work-delta-lake-tables-fabric/)
-[Ingest Data with Dataflows Gen2 in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/use-dataflow-gen-2-fabric/)
-[Orchestrate processes and data movement with Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/use-data-factory-pipelines-fabric/)
-[Organize a Fabric lakehouse using medallion architecture design](https://learn.microsoft.com/en-us/training/modules/describe-medallion-architecture/)
+## Modules
+- [Get started with lakehouses in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/get-started-lakehouses/)
+- [Use Apache Spark in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/use-apache-spark-work-files-lakehouse/)
+- [Work with Delta Lake tables in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/work-delta-lake-tables-fabric/)
+- [Ingest Data with Dataflows Gen2 in Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/use-dataflow-gen-2-fabric/)
+- [Orchestrate processes and data movement with Microsoft Fabric](https://learn.microsoft.com/en-us/training/modules/use-data-factory-pipelines-fabric/)
+- [Organize a Fabric lakehouse using medallion architecture design](https://learn.microsoft.com/en-us/training/modules/describe-medallion-architecture/)
