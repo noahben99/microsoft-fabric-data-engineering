@@ -1,3 +1,0 @@
-Color,Name,Age
-blue,John,34
-red,Alex,14
