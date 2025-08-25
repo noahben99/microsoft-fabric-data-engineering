@@ -28,7 +28,8 @@
         $fileDirectory = Split-Path $file.FullName -Parent
         $relativeDir = $fileDirectory.Substring($sourcePath.Length).TrimStart('\') -replace '\\', '/'
 
-        $folderKey = if ($relativeDir) { $relativeDir } else { $rootFolderName }
+        # Determine folder key for TOC grouping
+        $folderKey = if ($relativeDir) { $relativeDir } else { "." }
         if (-not $tree.ContainsKey($folderKey)) {
             $tree[$folderKey] = @{}
         }
@@ -45,7 +46,7 @@
                 $fragmentSource = $cleanHeading -replace '\s+', '-'                        # normalize spaces
                 $fragment = $fragmentSource.ToLower()
 
-                # Construct GitHub-safe absolute link with root folder prefix
+                # Construct GitHub-safe absolute link
                 $linkPath = if ($relativeDir) {
                     "$rootFolderName/$relativeDir/$fileName"
                 } else {
@@ -60,17 +61,23 @@
 
     $outputLines = @()
     $outputLines += "- 📁 $rootFolderName"
+
     foreach ($folder in $tree.Keys | Sort-Object) {
         $folderIndent = "    "
-        $folderPath = "$folder"
-        $outputLines += "${folderIndent}- 📁 $folderPath"
+        $folderLabel = if ($folder -eq ".") { $rootFolderName } else { $folder }
+        $outputLines += "${folderIndent}- 📁 $folderLabel"
 
         foreach ($file in $tree[$folder].Keys | Sort-Object) {
             $fileIndent = "${folderIndent}    "
-            $filePath = "$rootFolderName/$folder/$file"
+            $filePath = if ($folder -eq ".") {
+                "$rootFolderName/$file"
+            } else {
+                "$rootFolderName/$folder/$file"
+            }
+
             $fileLink = "$githubBaseUrl/$filePath"
-            $fileNameWithoutExtension = "$file" -replace '.md', ''
-            $outputLines += "${fileIndent}- 📄 [$fileNameWithoutExtension]($fileLink)" 
+            $fileNameWithoutExtension = "$file" -replace '.md$', ''
+            $outputLines += "${fileIndent}- 📄 [$fileNameWithoutExtension]($fileLink)"
 
             foreach ($link in $tree[$folder][$file]) {
                 $linkIndent = "${fileIndent}    "
