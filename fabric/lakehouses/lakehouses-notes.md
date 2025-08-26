@@ -38,6 +38,23 @@ Source data permissions and credentials are all managed by OneLake. When accessi
 
 Shortcuts can be created in both lakehouses and KQL databases, and appear as a folder in the lake. This allows Spark, SQL, Real-Time intelligence and Analysis Services to all utilize shortcuts when querying data
 
+## Create a shortcut in a Microsoft Fabric Lakehouse to a SQL Database within the same workspace
+
+How It Works When you create a shortcut from a Lakehouse to a Fabric SQL Database: 
+- **The SQL tables appear as Delta-like folders** under the Lakehouse’s *Files* section. 
+- Each folder follows a structure like `Schema/Table`, exposing the SQL data in a format readable by Spark and Notebooks. 
+- You can then query these tables in Notebooks using PySpark or other supported languages. 
+
+### Key Considerations 
+- **Read-Only Access**: The shortcut is read-only. You can query and transform the data, but you can't write back to the SQL Database from the Lakehouse. 
+- **Permissions Matter**: The shortcut inherits permissions from the source SQL Database. If the Lakehouse owner doesn’t have access to the SQL Database, the shortcut may not work or appear properly 
+[A](https://stackoverflow.com/questions/79143854/fabric-shortcut-tables-not-showing-in-sql-endpoint?copilot_analytics_metadata=eyJldmVudEluZm9fbWVzc2FnZUlkIjoiZVhoYlRncGJ5SGNrMzFiSDM4MXpSIiwiZXZlbnRJbmZvX2NsaWNrRGVzdGluYXRpb24iOiJodHRwczpcL1wvc3RhY2tvdmVyZmxvdy5jb21cL3F1ZXN0aW9uc1wvNzkxNDM4NTRcL2ZhYnJpYy1zaG9ydGN1dC10YWJsZXMtbm90LXNob3dpbmctaW4tc3FsLWVuZHBvaW50IiwiZXZlbnRJbmZvX2NsaWNrU291cmNlIjoiY2l0YXRpb25MaW5rIiwiZXZlbnRJbmZvX2NvbnZlcnNhdGlvbklkIjoiOFI1OWZ4ZVFpSEJGcXlTeDREalBLIn0%3D&citationMarker=9F742443-6C92-4C44-BF58-8F5A7C53B6F1)
+- **Discoverability**: Once created, the shortcut appears in the Lakehouse UI, making it easy to integrate SQL data into your data engineering workflows. 
+
+ideal for: 
+- Creating onboarding-friendly Notebooks that pull from SQL without duplicating data. 
+- Automating lightweight transformations before persisting to curated Lakehouse zones. 
+- Bridging SQL and Spark workflows for hybrid data engineering pipelines. 
 
 ## OneLake
 OneLake is Fabric's centralized data storage architecture that enables collaboration by eliminating the need to move or copy data between systems. OneLake unifies your data across regions and clouds into a single logical lake without moving or duplicating data.
